@@ -1,10 +1,4 @@
-/*******************************************************************************
- * Copyright (c) 2005, 2014 springx.github.io
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- *******************************************************************************/
 package com.springx.modules.persistence;
-
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -15,7 +9,55 @@ import com.google.common.collect.Maps;
 public class SearchFilter {
 
 	public enum Operator {
-		EQ, LIKE, GT, LT, GTE, LTE
+		/**
+		 * 等于
+		 */
+		EQ,
+
+		/**
+		 * 不等于
+		 */
+		NE,
+
+		/**
+		 * 大于
+		 */
+		GT,
+
+		/**
+		 * 小于
+		 */
+		LT,
+
+		/**
+		 * 大于等于
+		 */
+		GTE,
+
+		/**
+		 * 小于等于
+		 */
+		LTE,
+
+		/**
+		 * 相似
+		 */
+		LIKE,
+
+		/**
+		 * 包含
+		 */
+		IN,
+
+		/**
+		 * 为NULL
+		 */
+		ISNULL,
+
+		/**
+		 * 不为NULL
+		 */
+		ISNOTNULL
 	}
 
 	public String fieldName;
