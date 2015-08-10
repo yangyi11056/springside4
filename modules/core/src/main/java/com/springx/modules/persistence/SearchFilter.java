@@ -52,12 +52,12 @@ public class SearchFilter {
 		/**
 		 * 为NULL
 		 */
-		ISNULL,
+		NULL,
 
 		/**
 		 * 不为NULL
 		 */
-		ISNOTNULL
+		NOTNULL
 	}
 
 	public String fieldName;
