@@ -2,6 +2,8 @@ package com.springx.modules.persistence;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.commons.beanutils.ConvertUtils;
+import org.apache.commons.beanutils.Converter;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.collect.Maps;
@@ -80,7 +82,8 @@ public class SearchFilter {
 			// 过滤掉空值
 			String key = entry.getKey();
 			Object value = entry.getValue();
-			if (StringUtils.isBlank((String) value)) {
+
+			if (StringUtils.isBlank(ConvertUtils.convert(value))) {
 				continue;
 			}
 
